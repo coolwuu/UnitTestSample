@@ -12,19 +12,5 @@ namespace UnitTestSample01.Test
             holiday.SetToday(new DateTime(2020, 12, 25));
             Assert.AreEqual("Merry X'Mas", holiday.SayXMas());
         }
-
-        internal class FakeHoliday : Holiday
-        {
-            private DateTime _today;
-
-            internal void SetToday(DateTime today)
-            {
-                _today = today;
-            }
-            protected override DateTime GetToday()
-            {
-                return _today;
-            }
-        }
     }
 }
